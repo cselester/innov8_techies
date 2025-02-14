@@ -1,0 +1,266 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navbar */
+nav {
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a i {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Horizontal line after nav */
+nav::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 2px;
+    background-color: #ccc;
+    margin: 10px auto 0 auto; /* Center the line */
+}
+
+/* Header */
+header {
+    text-align: center;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    padding: 20px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 5rem; /* Increased font size */
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Team Section */
+.team {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: white;
+}
+
+.team h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.team-member {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.team-member h3 {
+    margin: 10px 0 5px;
+}
+
+.team-member p {
+    color: #666;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+    fill: #333;
+    transition: transform 0.3s;
+}
+
+.social-links a:hover img {
+    transform: scale(1.2);
+    fill: #2575fc;
+}
+
+/* Projects Section */
+.projects {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    text-align: center;
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: white;
+}
+
+.contact p {
+    font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    nav ul li a i {
+        font-size: 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+}
